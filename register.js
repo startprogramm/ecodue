@@ -1,3 +1,5 @@
+import { signUp } from './auth.js';
+
 const form = document.getElementById('register-form');
 const msg = document.getElementById('register-msg');
 const pwToggle = document.querySelector('.pw-toggle');
@@ -18,19 +20,14 @@ form.addEventListener('submit', async (e) => {
 
   if (!name || !email || !password) { msg.textContent = 'Please fill required fields.'; return; }
   if (password !== confirmPassword) { msg.textContent = 'Passwords do not match.'; return; }
+  if (password.length < 6) { msg.textContent = 'Password must be at least 6 characters.'; return; }
 
   try {
-    const res = await fetch('/api/auth/register', {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({ name, email, password })
-    });
-    const data = await res.json();
-    if (!res.ok) { msg.textContent = data.message || 'Registration failed.'; return; }
+    await signUp(email, password, name);
     msg.style.color = '#2a8f3a';
-    msg.textContent = 'Registered. Redirecting to login...';
+    msg.textContent = 'Registered successfully! Redirecting to login...';
     setTimeout(() => location.href = 'login.html', 1000);
   } catch (err) {
-    msg.textContent = 'Network error.';
+    msg.textContent = err.message || 'Registration failed.';
   }
 });
