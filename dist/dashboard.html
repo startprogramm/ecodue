@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - EcoDu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <style>
+    .dashboard-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #2a8f3a;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .stat-card {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .stat-card h3 {
+      color: #2a8f3a;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+    .stat-card .stat-value {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .recent-activity {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .activity-item {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/dashboard-B5obw7R_.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/auth-aIv_B0Df.js">
+  <link rel="stylesheet" crossorigin href="/assets/style-JNxYPFdl.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <h2 class="logo-text">EcoDu🌱</h2>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="profile.html" class="nav-link">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard-container">
+    <div class="dashboard-header">
+      <div>
+        <h1>My Dashboard</h1>
+        <p id="user-greeting">Welcome back!</p>
+      </div>
+      <a href="index.html" class="button">Back to Home</a>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>Quizzes Completed</h3>
+        <div class="stat-value" id="quiz-count">0</div>
+      </div>
+      <div class="stat-card">
+        <h3>Average Score</h3>
+        <div class="stat-value" id="avg-score">0%</div>
+      </div>
+      <div class="stat-card">
+        <h3>Comments Posted</h3>
+        <div class="stat-value" id="comment-count">0</div>
+      </div>
+      <div class="stat-card">
+        <h3>Member Since</h3>
+        <div class="stat-value" style="font-size: 1.2rem;" id="member-since">-</div>
+      </div>
+    </div>
+
+    <div class="recent-activity">
+      <h2 style="margin-bottom: 1rem;">Recent Quiz Attempts</h2>
+      <div id="recent-quizzes">
+        <p style="color: #666;">No quiz attempts yet. Start learning!</p>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

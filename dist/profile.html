@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Profile - EcoDu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script type="module" crossorigin src="/assets/profile-_FtOMmzk.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/auth-aIv_B0Df.js">
+  <link rel="stylesheet" crossorigin href="/assets/register-C7dd7Ejx.css">
+</head>
+<body>
+
+  <main class="auth-section">
+    <div class="auth-card" role="region" aria-labelledby="profile-title">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h1 id="profile-title" class="section-title">My Profile</h1>
+        <a href="index.html" style="color: #2a8f3a; text-decoration: none;">
+          <i class="fas fa-home"></i> Home
+        </a>
+      </div>
+
+      <form id="profile-form" novalidate>
+        <div class="input-group">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" required />
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" disabled style="background-color: #f5f5f5; cursor: not-allowed;" />
+        </div>
+
+        <div class="input-group">
+          <label for="bio">Bio</label>
+          <textarea id="bio" name="bio" rows="4" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;"></textarea>
+        </div>
+
+        <button type="submit" class="button primary">Update Profile</button>
+        <button type="button" id="logout-btn" class="button" style="background-color: #dc3545; margin-top: 0.5rem;">Log Out</button>
+
+        <p id="profile-msg" class="form-msg" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>

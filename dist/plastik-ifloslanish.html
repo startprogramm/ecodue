@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>watch</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+
+  <script type="module" crossorigin src="/assets/plastik-DHIl34kM.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/auth-aIv_B0Df.js">
+  <link rel="stylesheet" crossorigin href="/assets/watch-video-D9PPK6QP.css">
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="index.html" class="logo">EcoDu🌱</a>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+
+      <div class="profile" id="user-profile">
+         <div id="logged-out-view">
+            <p style="padding: 1rem;">Please log in to access all features</p>
+            <a href="index.html" class="btn">Home</a>
+            <div class="flex-btn">
+               <a href="login.html" class="option-btn">login</a>
+               <a href="register.html" class="option-btn">register</a>
+            </div>
+         </div>
+         <div id="logged-in-view" style="display: none;">
+            <img src="/assets/ECODU-DUsYRpIS.jpg" class="image" alt="">
+            <h3 class="name" id="user-name">User</h3>
+            <p class="role">Student</p>
+            <a href="index.html" class="btn">Home</a>
+            <div class="flex-btn">
+               <a href="profile.html" class="option-btn">Profile</a>
+            </div>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="/assets/ECODU-DUsYRpIS.jpg" class="image" alt="">
+      <a href="index.html" class="btn">Home</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="o'rmonlar-kesilishi.html"><i class="fa-solid fa-tree"></i><span>O'rmonlar kesilishi</span></a>
+      <a href="#"><i class="fa-solid fa-bottle-water"></i><span>Plastik ifloslanish</span></a>
+      <a href="havo-ifloslanishi.html"><i class="fa-solid fa-wind"></i><span>Havo ifloslanishi</span></a>
+      <a href="suv-ifloslanishi.html"><i class="fa-solid fa-glass-water-droplet"></i><span>Suv ifloslanishi</span></a>
+      <a href="yovvyi-tabiat.html"><i class="fa-solid fa-hippo"></i><span>Yovvoyi tabiat</span></a>
+   </nav>
+
+</div>
+
+<section class="watch-video">
+
+   <div class="video-container">
+      <div class="video">
+         <!--<video src="https://www.youtube.com/watch?v=uLMf1lqz5lE&list=PLfFbb6n4yK_s4qO3EAtPvDjZLbWJIIf7C&index=14" controls poster="images/post-1-1.png" id="video"></video>-->
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/X7fd43sDWLw?si=OAB6FAmHA0KDZhTb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <h2 class="title">Plastik ifloslanish</h2>
+      <p>Plastik nega xavfli? U tabiatni qanday ifloslantiradi va biz uni kamaytirish uchun nimalar qilishimiz mumkinligi haqida bilib oling!</p>
+      <div class="info">
+         <p class="date"><i class="fas fa-calendar"></i><span>11-09-2025</span></p>
+      </div>
+      <div class="tutor">
+         <img src="/assets/Nurjahon-kzHHoa14.jpg" alt="">
+         <div>
+            <h3>Nurjahon</h3>
+            <span>Video developer</span>
+         </div>
+      </div>
+   </div>
+
+</section>
+
+<section class="comments" style="max-width: 1200px; margin: 2rem auto; padding: 0 2rem;">
+   <h2 style="margin-bottom: 1.5rem; color: #2a8f3a;">Comments</h2>
+
+   <div id="comment-form-container" style="display: none; margin-bottom: 2rem; padding: 1.5rem; background: #f9f9f9; border-radius: 8px;">
+      <h3 style="margin-bottom: 1rem;">Add a Comment</h3>
+      <form id="comment-form">
+         <textarea id="comment-content" placeholder="Share your thoughts..." style="width: 100%; min-height: 100px; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; resize: vertical;"></textarea>
+         <button type="submit" style="margin-top: 0.5rem; padding: 0.75rem 1.5rem; background: #2a8f3a; color: white; border: none; border-radius: 4px; cursor: pointer;">Post Comment</button>
+         <p id="comment-msg" style="margin-top: 0.5rem; color: #dc3545;"></p>
+      </form>
+   </div>
+
+   <div id="login-prompt" style="padding: 1.5rem; background: #f9f9f9; border-radius: 8px; text-align: center;">
+      <p>Please <a href="login.html" style="color: #2a8f3a;">log in</a> to view and post comments.</p>
+   </div>
+
+   <div id="comments-list"></div>
+</section>
+
+<footer class="footer-section">
+            <div class="section-content">
+                <p class="copyright-text">© 2025 EcoDu. All rights reserved.</p>
+                <div class="social-link-list">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <p class="policy-text">
+                    <a href="#" class="policy-link">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="policy-link">Terms of Service</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="policy-link">Contact Us</a>
+                </p>
+            </div>
+        </footer>
+
+<!-- custom js file link  -->
+<script src="watch-video.js"></script>
+
+</body>
+</html>
